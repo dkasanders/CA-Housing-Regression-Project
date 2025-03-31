@@ -1,0 +1,53 @@
+X:
+-longitude 
+-latitude
+-housing_median_age
+-total_rooms
+-total_bedrooms
+-population
+-households
+-median_income
+
+PREDICTOR
+-median_house_value
+
+ideas:
+
+-people_per_household -> population/households
+-Distance to LosAngeles
+-Distance to San Francisco 
+
+=income_per_block
+
+log_incomemodel -> log median house value vs median income. R^2=0.4284.
+
+income_model where you're plotting median house value vs median income is better :( r^2=0.4734
+
+actually the residuals are better???
+
+
+sexy_model <- log_median_house_value ~ data$median_income ++ housing_median_age + exp_distance_to_los_angeles + exp_distance_to_san_francisco
+
+
+
+log(e^-d1 + e^-d2)
+VARIABLES:
+-DISTANCE FORMULA
+-MEDIAN INCOME
+-POPULATION PER HOUSEHOLDS
+-BEDROOMS PER ROOM
+-TOTAL_BLOCK_INCOME
+-ROOMS_PER_HOUSE
+
+
+
+Data points with high cooks distance:
+18060 and 15945
+
+
+
+
+
+
+
+
